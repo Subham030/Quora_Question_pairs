@@ -1,14 +1,14 @@
 # Quora Question Pairs Detection
 
-## 📌 Project Overview
+## Project Overview
 This repository contains a machine learning pipeline designed to identify duplicate question pairs on Quora. By analyzing over a random 30,000 question pairs, the goal is to build a model that can determine if two questions have the same intent, which is crucial for reducing redundancy in large-scale Q&A platforms.
 
-## 📊 Dataset Analysis
+## Dataset Analysis
 The project utilizes the Quora Question Pairs dataset:
 * **Total Pairs**: ~404,290
 * **Pairs Taken**: ~30,000
 
-## 🛠️ Feature Engineering
+## Feature Engineering
 The core of the project involves transforming raw text into meaningful numeric features:
 * **Basic Features**: Length of each questions,	number of words, common words	total words, words share ratio (common words / total words)
 *  **Advanced Features**:
@@ -18,7 +18,7 @@ The core of the project involves transforming raw text into meaningful numeric f
 
 * **Vectorization**: Implemented `CountVectorizer` (Bag of Words) with the top 3,000 features to represent text data.
 
-## 🚀 Machine Learning Models
+## Machine Learning Models
 Three high-performance classification models were implemented and compared:
 1. **Random Forest**: Baseline ensemble model.
 2. **XGBoost**: Gradient boosted decision trees for improved accuracy.
@@ -41,9 +41,11 @@ Three high-performance classification models were implemented and compared:
 **Confusion Matrix for Random Forest**: 
  [[4331  736]
  [ 944 1989]]
+ 
 **Confusion Matrix for XGBoost Model**: 
  [[4270  797]
  [ 821 2112]]
+ 
 **Confusion Matrix for LightGBM**: 
  [[4251  816]
  [ 774 2159]]
